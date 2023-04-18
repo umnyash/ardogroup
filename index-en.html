@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" class="root no-js">
+<head>
+    <!-- Basic Page Needs
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ARDO Group</title>
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- Favicons
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/favicon-180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    
+    <!-- A check whether JavaScript is enabled or not
+      -- and whether a browser is IE, Opera Mini or not
+      -------------------------------------------------- -->
+    <script>
+        (function (D) {
+            // Detecting Opera Mini http://dev.opera.com/articles/view/opera-mini-and-javascript/#detectingmini
+            var isOperaMini = (Object.prototype.toString.call(window.operamini) === "[object OperaMini]") ? "operamini" : "";
+            var isIE = (function getInternetExplorerVersion() {
+                var rv = "",
+                        ua = navigator.userAgent,
+                        an = navigator.appName,
+                        re = '([0-9]{1,}[\.0-9]{0,})';
+                if (an == "Microsoft Internet Explorer") {
+                    if (new RegExp("MSIE " + re).exec(ua) != null) {
+                        rv = "ie ie" + parseInt(RegExp.$1);
+                    }
+                }
+                else if (an == "Netscape") {
+                    if (new RegExp("Trident/.*rv:" + re).exec(ua) != null) {
+                        rv = "ie ie" + parseInt(RegExp.$1);
+                    } else if (new RegExp("Edge/" + re).exec(ua) != null) {
+                        rv = "edge edge" + parseInt(RegExp.$1);
+                    }
+                }
+                return rv;
+            })();
+            D.className = D.className.replace(/\bno-js\b/, 'js') +
+                    (isIE !== "" ? " " + isIE : "") + (isOperaMini !== "" ? " " + isOperaMini : "");
+        })(document.documentElement)
+    </script>
+    <!-- A script (svg4everybody) that polyfills the usage of an external SVG sprite
+      -------------------------------------------------- -->
+    <script>!function(e,t){"function"==typeof define&&define.amd?define([],function(){return e.svg4everybody=t()}):"object"==typeof exports?module.exports=t():e.svg4everybody=t()}(this,function(){function e(e,t){if(t){var n=document.createDocumentFragment(),i=!e.getAttribute("viewBox")&&t.getAttribute("viewBox");i&&e.setAttribute("viewBox",i);for(var a=t.cloneNode(!0);a.childNodes.length;)n.appendChild(a.firstChild);e.appendChild(n)}}function t(t){t.onreadystatechange=function(){if(4===t.readyState){var n=t._cachedDocument;n||(n=t._cachedDocument=document.implementation.createHTMLDocument(""),n.body.innerHTML=t.responseText,t._cachedTarget={}),t._embeds.splice(0).map(function(i){var a=t._cachedTarget[i.id];a||(a=t._cachedTarget[i.id]=n.getElementById(i.id)),e(i.svg,a)})}},t.onreadystatechange()}function n(n){function i(){for(var n=0;n<g.length;){var r=g[n],d=r.parentNode;if(d&&/svg/i.test(d.nodeName)){var c=r.getAttribute("xlink:href");if(a&&(!o.validate||o.validate(c,d,r))){d.removeChild(r);var l=c.split("#"),m=l.shift(),f=l.join("#");if(m.length){var v=s[m];v||(v=s[m]=new XMLHttpRequest,v.open("GET",m),v.send(),v._embeds=[]),v._embeds.push({svg:d,id:f}),t(v)}else e(d,document.getElementById(f))}}else++n}u(i,67)}var a,o=Object(n),r=/\bTrident\/[567]\b|\bMSIE (?:9|10)\.0\b/,d=/\bAppleWebKit\/(\d+)\b/,c=/\bEdge\/12\.(\d+)\b/;a="polyfill"in o?o.polyfill:r.test(navigator.userAgent)||(navigator.userAgent.match(c)||[])[1]<10547||(navigator.userAgent.match(d)||[])[1]<537;var s={},u=window.requestAnimationFrame||setTimeout,g=document.getElementsByTagName("use");a&&i()}return n});</script>
+    <script>svg4everybody(); // manual call is necessary</script>
+    <!-- Inline styles for the preloader
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <style>.js #page-init-preloader{position:fixed;left:0;top:0;z-index:99999;width:100%;height:100%;overflow:hidden;background-color:#fff}</style>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter45776088 = new Ya.Metrika({
+                        id:45776088,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/45776088" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google.Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-105657929-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- /Google.Analytics -->
+    
+    <!-- Styles
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/style.min.css?v={{version}}">
+</head>
+<body class="page page--index">
+<div id="page-init-preloader"></div>
+<header class="p-header">
+    <div class="p-container p-container--wide">
+        <nav class="main-menu js-menu">
+            <a class="main-menu__logo" href="#intro">
+                <svg class="main-menu__logo-img" width="136" height="29" viewBox="0 0 136 29" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип Ardo group.">
+                    <g clip-path="url(#clip0_7664_56341)">
+                    <path d="M126.957 24.2867H122.32V29.0031H126.957V24.2867Z" fill="black"/>
+                    <path d="M117.27 24.2867H112.633V29.0031H117.27V24.2867Z" fill="#27325B"/>
+                    <path d="M107.59 24.2867H102.953V29.0031H107.59V24.2867Z" fill="#476E6A"/>
+                    <path d="M97.9106 24.2867H93.2734V29.0031H97.9106V24.2867Z" fill="#C72034"/>
+                    <g class="main-menu__logo-img-text">
+                        <path d="M126.918 6.86926H122.805V22.5225H126.918V6.86926Z"/>
+                        <path d="M67.5355 22.3V19.5893C68.5858 19.5893 69.5985 19.5893 70.6081 19.5893C71.8089 19.5893 73.0097 19.5893 74.2043 19.5204C75.0759 19.4671 75.7123 19.0221 75.9694 17.9848C74.8345 17.9848 73.7559 18.0099 72.6774 17.9848C71.8452 17.9886 71.0143 17.9194 70.1942 17.778C68.4416 17.4051 67.3724 16.2362 66.9398 14.5471C66.4266 12.5735 66.3964 10.5053 66.852 8.51766C67.4163 6.01064 68.9275 4.75712 71.4859 4.70071C73.4925 4.64431 75.5023 4.65684 77.512 4.70071C79.0797 4.72892 79.9042 5.58758 79.9105 7.167C79.9105 10.5233 79.9325 13.8827 79.9105 17.239C79.8886 20.4229 78.462 22.0274 75.101 22.2844C72.6178 22.4755 70.1064 22.322 67.5386 22.322M75.9851 15.1143C75.9851 12.8141 75.9851 10.6079 75.9851 8.40484C75.9948 8.29281 75.9797 8.18002 75.941 8.07444C75.9022 7.96886 75.8408 7.87308 75.7609 7.79387C75.6811 7.71465 75.5848 7.65393 75.4789 7.61601C75.373 7.57808 75.26 7.56388 75.148 7.57439C74.3432 7.532 73.5364 7.5477 72.7338 7.6214C71.4797 7.76555 70.8275 8.37977 70.7084 9.61135C70.594 10.7429 70.594 11.8831 70.7084 13.0146C70.8495 14.3434 71.6082 15.0109 72.9251 15.1017C73.9033 15.1675 74.894 15.1017 75.9788 15.1017"/>
+                        <path d="M122.945 22.1464V19.3542C122.945 15.3179 122.945 11.2816 122.945 7.24526C122.945 5.50288 123.72 4.69123 125.454 4.66929C127.335 4.64422 129.216 4.63795 131.097 4.66929C133.775 4.7351 135.465 6.07009 135.831 8.7244C136.07 10.446 136.07 12.1923 135.831 13.9139C135.443 16.5651 133.75 17.8876 131.053 17.9597C129.671 17.9941 128.291 17.9597 126.802 17.9597V22.1464H122.945ZM126.811 15.0672C127.918 15.0672 128.931 15.1142 129.946 15.0672C131.044 14.9982 131.787 14.3401 131.906 13.2746C132.06 12.0425 132.078 10.7972 131.959 9.56112C131.812 8.23553 131.081 7.68085 129.765 7.56804C129.116 7.51476 128.463 7.5461 127.811 7.55237C127.68 7.53815 127.547 7.55345 127.422 7.59716C127.298 7.64086 127.184 7.71185 127.09 7.80496C126.997 7.89806 126.925 8.01093 126.88 8.1353C126.836 8.25968 126.82 8.39242 126.833 8.52384C126.833 10.6767 126.833 12.8328 126.833 15.0797"/>
+                        <path d="M98.5994 4.44995C99.4867 4.55337 100.584 4.62231 101.653 4.82287C103.763 5.21773 105.068 6.47437 105.5 8.60848C105.895 10.4978 105.874 12.4505 105.437 14.3308C104.917 16.5432 103.346 17.6087 101.214 17.9283C99.2583 18.2326 97.2654 18.2104 95.3167 17.8625C93.053 17.4489 91.592 16.164 91.3192 13.8826C91.098 12.219 91.0917 10.5338 91.3004 8.86858C91.6798 6.25814 93.2161 5.00463 95.9124 4.68498C96.7401 4.58784 97.5741 4.5471 98.6119 4.46249M101.804 11.244C101.804 8.19795 100.361 6.96011 97.3484 7.50852C96.273 7.70595 95.5456 8.2951 95.2759 9.36685C94.9309 10.6528 94.9374 12.0078 95.2948 13.2903C95.4329 13.8149 95.7323 14.283 96.1507 14.6285C97.4048 15.5028 98.8157 15.4558 100.183 14.9418C101.371 14.4906 101.634 13.4063 101.735 12.275C101.763 11.9616 101.775 11.6482 101.804 11.2503"/>
+                        <path d="M107.485 4.70064H111.398V6.0325C111.398 8.22615 111.398 10.4198 111.423 12.5946C111.448 14.1835 112.241 14.9888 113.818 15.1017C114.467 15.1455 115.119 15.1424 115.771 15.1299C116.674 15.1142 116.875 14.9168 116.875 14.0142C116.875 11.2283 116.875 8.44238 116.875 5.65645V4.73825H120.756C120.756 4.97015 120.791 5.22085 120.791 5.47155C120.791 8.74949 120.791 12.0295 120.791 15.3116C120.791 17.217 120.042 17.9785 118.145 17.9628C115.878 17.9409 113.602 18.0223 111.347 17.8218C108.952 17.6087 107.585 16.1327 107.507 13.7479C107.403 10.7582 107.482 7.76548 107.482 4.69751"/>
+                        <path d="M90.5544 4.71945V7.48657C89.8333 7.52418 89.1373 7.51478 88.4507 7.60252C86.9677 7.79055 86.1431 8.54266 86.0553 10.0218C85.9267 12.2531 85.9518 14.4937 85.9173 16.7312C85.9173 17.1135 85.9173 17.499 85.9173 17.9221H82.0703V17.1041C82.0703 14.7601 82.0703 12.4171 82.0703 10.0751C82.0703 6.5151 83.2993 5.09863 86.8485 4.74765C88.0525 4.62543 89.2815 4.72885 90.5544 4.72885"/>
+                        <path d="M19.9562 17.6745C18.4513 17.6745 17.0216 17.6933 15.5981 17.6494C15.4037 17.6494 15.1404 17.3642 15.0463 17.148C14.6325 16.2079 14.2562 15.227 13.8957 14.2524C13.8558 14.0774 13.7521 13.9237 13.6048 13.8211C13.4575 13.7185 13.2773 13.6745 13.0993 13.6977C11.0112 13.7196 8.92621 13.6977 6.82869 13.729C6.67938 13.7521 6.53713 13.8083 6.41236 13.8934C6.28758 13.9785 6.18344 14.0905 6.10757 14.2211C5.67176 15.1863 5.33001 16.1985 4.89107 17.1731C4.83786 17.29 4.75936 17.3936 4.66122 17.4765C4.56309 17.5594 4.44777 17.6196 4.32358 17.6525C2.9221 17.6933 1.52062 17.6745 0 17.6745C0.601978 16.2173 1.16006 14.8541 1.73069 13.494C3.30461 9.72094 4.88376 5.95414 6.46813 2.19361C7.17357 0.513899 7.98562 0.0312974 9.93264 -4.04408e-05C11.6163 -0.0313782 12.8234 0.557772 13.5006 2.19361C15.5354 7.11991 17.6235 12.0211 19.6897 16.9224C19.7775 17.1323 19.8465 17.3517 19.9562 17.6557M7.41499 10.2756H12.5569L10.1145 4.22743H9.85739L7.40872 10.2944"/>
+                        <path d="M38.8815 4.38733V0.213135H42.7285C42.7285 0.479506 42.763 0.733342 42.763 0.984045C42.763 5.69516 42.763 10.4063 42.763 15.1174C42.763 16.8316 41.9666 17.6777 40.2548 17.6777C38.0601 17.6777 35.8653 17.6996 33.6957 17.5398C31.6703 17.3925 30.4162 16.1265 29.9271 14.2055C29.3785 12.1045 29.3785 9.89789 29.9271 7.79688C30.4883 5.63771 32.1218 4.45941 34.5046 4.3936C35.9312 4.35599 37.3609 4.3936 38.869 4.3936M38.869 7.30801C38.5774 7.28608 38.3736 7.2516 38.1729 7.25474C37.3648 7.22801 36.5558 7.2437 35.7493 7.30174C34.536 7.4365 33.8211 8.07265 33.6926 9.29483C33.5766 10.4818 33.5766 11.6772 33.6926 12.8642C33.7992 13.9736 34.4733 14.594 35.5738 14.7445C36.3778 14.827 37.1868 14.8501 37.9942 14.8134C38.1065 14.8226 38.2194 14.8071 38.325 14.768C38.4306 14.7289 38.5264 14.6672 38.6056 14.5871C38.6847 14.5071 38.7454 14.4107 38.7834 14.3047C38.8213 14.1987 38.8355 14.0856 38.8251 13.9736C38.8251 13.0334 38.8627 12.0933 38.869 11.1532C38.869 9.88398 38.869 8.6148 38.869 7.30801Z"/>
+                        <path d="M51.6097 17.9033C50.7255 17.7967 49.6313 17.7246 48.559 17.5272C46.4741 17.1449 45.1917 15.8976 44.7465 13.8074C44.3862 12.0968 44.3575 10.333 44.6618 8.6116C45.0569 6.2644 46.4458 4.87614 48.8161 4.47501C50.821 4.12389 52.8718 4.12389 54.8767 4.47501C57.1654 4.87927 58.5544 6.18606 58.9714 8.48312C59.3421 10.3503 59.2972 12.2761 58.8397 14.1239C58.291 16.2204 56.8017 17.3831 54.3907 17.662C53.5379 17.7622 52.6788 17.803 51.6097 17.8876M55.2184 10.9713C55.2404 7.88457 53.7417 6.60599 50.713 7.2108C50.2311 7.27383 49.78 7.48262 49.4202 7.80918C49.0605 8.13574 48.8092 8.56444 48.7001 9.0378C48.3462 10.3484 48.3549 11.7304 48.7252 13.0365C48.8568 13.5356 49.1406 13.9814 49.5372 14.312C50.7914 15.1925 52.196 15.1518 53.5692 14.6441C54.7607 14.1991 55.0397 13.1242 55.1369 11.9898C55.162 11.6764 55.1808 11.3631 55.2059 10.987"/>
+                        <path d="M24.4393 17.6432H20.6769C20.6381 17.5672 20.6106 17.4859 20.5954 17.4019C20.5954 14.4875 20.5296 11.57 20.655 8.65869C20.7584 6.30522 21.9404 4.99217 24.2512 4.61298C25.8188 4.35288 27.4492 4.38422 29.0983 4.28394V7.24536C28.6124 7.24536 28.1577 7.24536 27.6937 7.24536C25.5649 7.28296 24.5584 8.20429 24.4926 10.3321C24.4267 12.46 24.4581 14.6003 24.4393 16.7344V17.6432Z"/>
+                    </g>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_7664_56341">
+                    <rect width="136" height="29" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </a>
+            <ul class="main-menu__list">
+                <li class="main-menu__list-item" data-menuanchor="build">
+                    <a class="main-menu__link" href="#build" title="ART&Natura">A1</a>
+                </li>
+                <li class="main-menu__list-item" data-menuanchor="produce">
+                    <a class="main-menu__link" href="#produce" title="ART&Natura">ART&NATURA</a>
+                </li>
+                <li class="main-menu__list-item" data-menuanchor="sell">
+                    <a class="main-menu__link" href="#sell" title="ART&Natura">ARDOPROJECT</a>
+                </li>
+                <li class="main-menu__list-item" data-menuanchor="natura">
+                    <a class="main-menu__link" href="#natura" title="ART&Natura">ARDOSTUDIO</a>
+                </li>
+            </ul>
+            <a class="back-call-submit btn btn--action btn--ghost js-modal-trigger" href="#" title="callback" data-modal-id="back-call">
+                <svg class="svg-icon" width="15" height="15">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#phone"></use>
+                </svg>
+                <span>Callback</span>
+            </a>
+            <div class="p-header__links">
+                <a class="p-header__link p-header__link--phone link" href="tel:+74953203222" title="">
+                    <svg class="svg-icon" width="15" height="15">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#phone"></use>
+                    </svg>
+                    <span>+7(495) 3 203-222</span>
+                </a>
+                <a class="p-header__link p-header__link--email link" href="mailto:order@groupardo.com" title="">
+                    <svg class="svg-icon" width="20" height="12">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#email"></use>
+                    </svg>
+                    <span>order@groupardo.com</span>
+                </a>
+            </div>
+            <ul class="lang-switcher">
+                <li class="lang-switcher__item">
+                    <a class="lang-switcher__link link" href="index.html" title="Go to the Russian version">Ru</a>
+                </li>
+                <li class="lang-switcher__item is-current">
+                    <a class="lang-switcher__link link">En</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header><!-- .p-header -->
+<main class="p-main" id="fullpage">
+    <section class="section section--intro active" data-anchor="intro">
+        <div class="p-container">
+            <h1 class="main-title">ARDO Group</h1>
+            <div class="section__content">
+                <div class="section__interactive-block-wrapper js-interactive-block-wrapper">
+                    <div class="interactive-block js-interactive-block">
+                        <div class="interactive-block__icons-wrapper">
+                            <div class="main-logo">
+                                <a class="main-logo__link" href="#intro" title="ARDO Group">
+                                    <img class="main-logo__img" src="img/main-logo.svg" width="136" height="29" alt="Логотип Ardo group.">
+                                </a>
+                            </div>
+                            <div class="socials">
+                                <a class=socials__link href="https://vk.com/ardo_studio" target="_blank" title="VK">
+                                    <svg class="socials__svg-icon socials__svg-icon--vk" width="34" height="21" role="img" aria-label="VK.">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#vk"></use>
+                                    </svg>
+                                </a>
+                                <a class=socials__link href="https://t.me/ArdoStudio_official" target="_blank" title="Telegram">
+                                    <svg class="socials__svg-icon" width="26" height="23" role="img" aria-label="Telegram.">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#telegram"></use>
+                                    </svg>
+                                </a>
+                                <a class=socials__link href="https://www.youtube.com/channel/UCeCClWuZGmBDn_2L5QmoEyA" target="_blank" title="YouTube">
+                                    <svg class="socials__svg-icon" width="28" height="21" role="img" aria-label="YouTube.">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#youtube"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <nav class="interactive-block__menu">
+                            <ul class="interactive-block__menu-list">
+                                <li class="interactive-block__menu-item" data-menuanchor="build">
+                                    <a href="#build" title="Construction">Construction</a>
+                                </li>
+                                <li class="interactive-block__menu-item" data-menuanchor="produce">
+                                    <a href="#produce" title="Production">Production</a>
+                                </li>
+                                <li class="interactive-block__menu-item" data-menuanchor="sell">
+                                    <a href="#sell" title="Sales">Sales</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="clients">
+            <h2 class="visually-hidden">Наши клиенты</h2>
+            <ul class="clients__list">
+                <li class="clients__item">
+                    <img class="clients__img" src="img/clients/client-1.png" srcset="img/clients/client-1@2x.png 2x" width="326" height="42" alt="Capital Group.">
+                </li>
+                <li class="clients__item">
+                    <img class="clients__img" src="img/clients/client-2.png" srcset="img/clients/client-2@2x.png 2x" width="216" height="69" alt="Soho Noho.">
+                </li>
+                <li class="clients__item">
+                    <img class="clients__img" src="img/clients/client-3.png" srcset="img/clients/client-3@2x.png 2x" width="216" height="67" alt="Береговой.">
+                </li>
+                <li class="clients__item">
+                    <img class="clients__img" src="img/clients/client-4.png" srcset="img/clients/client-4@2x.png 2x" width="179" height="77" alt="Zавидово.">
+                </li>
+                <li class="clients__item">
+                    <img class="clients__img" src="img/clients/client-5.png" srcset="img/clients/client-5@2x.png 2x" width="210" height="66" alt="Английский квартал.">
+                </li>
+                <li class="clients__item">
+                    <img class="clients__img" src="img/clients/client-6.png" srcset="img/clients/client-6@2x.png 2x" width="190" height="81" alt="Eleven.">
+                </li>
+                <li class="clients__item">
+                    <img class="clients__img" src="img/clients/client-7.png" srcset="img/clients/client-7@2x.png 2x" width="210" height="66" alt="ЖК Серебряный фонтан.">
+                </li>
+            </ul>
+        </section>
+    </section>
+    <section class="section section--build" data-anchor="build">
+        <div class="p-container">
+            <h2 class="section-title">Construction company</h2>
+            <div class="section__content">
+                <div class="grid grid--top grid--gutters">
+                    <div class="grid__cell grid__cell--col5">
+                        <div class="section__interactive-block-wrapper js-interactive-block-wrapper"></div>
+                    </div>
+                    <div class="grid__cell grid__cell--col7">
+                        <div class="section__description">
+                            <p>General contract for the construction of residential facilities, industrial and civil structures, medical facilities and complex architectural forms.</p>
+                        </div>
+                        <a class="btn btn--action btn--solid btn--a1" href="https://stroy-a1.ru/" target="_blank" title="Go to the A1-stroy website">Go to the website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section--produce" data-anchor="produce">
+        <div class="p-container">
+            <div class="section__logo-wrapper">
+                <div class="section__logo">
+                    <img class="section__logo-img br10" src="img/logos/artnatura.svg" width="395" height="151" alt="Art & Natura.">
+                </div>
+            </div>
+            <h2 class="section-title">Stone, mosaic and wood processing factory</h2>
+            <div class="section__content">
+                <div class="grid grid--top grid--gutters">
+                    <div class="grid__cell grid__cell--col5">
+                        <div class="section__interactive-block-wrapper js-interactive-block-wrapper"></div>
+                    </div>
+                    <div class="grid__cell grid__cell--col7">
+                        <div class="section__description">
+                            <p>We produce individual products from glass, ceramics, natural and artificial stone, mosaic decorative panels and wood flooring.</p>
+                        </div>
+                        <a class="btn btn--action btn--solid btn--artnatura" href="https://artandnatura.com/" target="_blank" title="Go to the Art&Natura website">Go to the website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section--sell" data-anchor="sell">
+        <div class="p-container">
+            <div class="section__logo-wrapper">
+                <div class="section__logo">
+                    <img class="section__logo-img" src="img/logos/ardoproject.png" srcset="img/logos/ardoproject@2x.png 2x" width="450" height="75" alt="Ardo Project.">
+                </div>
+            </div>
+            <h2 class="section-title">Complete set of objects under construction</h2>
+            <div class="section__content">
+                <div class="grid grid--top grid--gutters">
+                    <div class="grid__cell grid__cell--col5">
+                        <div class="section__interactive-block-wrapper js-interactive-block-wrapper"></div>
+                    </div>
+                    <div class="grid__cell grid__cell--col7">
+                        <div class="section__description">
+                            <p>We complete the project and bring it to commissioning, promptly resolve emerging issues.</p>
+                        </div>
+                        <a class="btn btn--action btn--solid btn--ardoproject" href="https://ardoproject.ru/" target="_blank" title="Go to the Ardo Project website">Go to the website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section--art-natura" data-anchor="natura">
+        <div class="p-container">
+            <div class="section__logo-wrapper">
+                <div class="section__logo">
+                    <img class="section__logo-img br3" src="img/logos/ardostudio.png" srcset="img/logos/ardostudio@2x.png 2x" width="126" height="40" alt="Ardo Studio.">
+                </div>
+            </div>
+            <h2 class="section-title">The largest supplier of ceramics and sanitary ware from Europe</h2>
+            <div class="section__content">
+                <div class="grid grid--top grid--gutters">
+                    <div class="grid__cell grid__cell--col5">
+                        <div class="section__interactive-block-wrapper js-interactive-block-wrapper"></div>
+                    </div>
+                    <div class="grid__cell grid__cell--col7">
+                        <div class="section__description">
+                            <p>Two showrooms in Moscow and St. Petersburg over 1400m2.
+                                More than 90 exclusive brands of tiles, porcelain tiles, sanitary ware and more than 5,000 items in stock.</p>
+                        </div>
+                        <a class="btn btn--action btn--solid btn--ardostudio" href="https://www.studioardo.ru/" target="_blank" title="Go to the Studio Ardo website">Go to the website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main><!-- .p-main --><!-- #fullpage -->
+
+<div class="p-modal p-modal--back-call is-hidden js-modal" id="back-call">
+    <div class="p-modal__overlay js-modal-overlay"></div>
+    <div class="p-modal__inner">
+        <button class="btn btn--close js-modal-close" type="button">Close</button>
+        <div class="p-modal__content">
+            <p class="p-modal__title">Order callback</p>
+            <form class="p-modal__form" id="user-data-form" action="/" method="post">
+                <div class="user-data-form__row">
+                    <input class="input" type="text" name="name" placeholder="Your name" required>
+                </div>
+                <div class="user-data-form__row">
+                    <input class="input" type="tel" name="phone" placeholder="Phone number" required>
+                </div>
+                <div class="p-modal__buttons">
+                    <button class="btn btn--action btn--solid" type="submit">Order callback</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="js/vendor/jquery-3.1.1.min.js?v={{version}}"></script>
+<script src="js/vendor/jquery.fullPage.js?v={{version}}"></script>
+<script src="js/vendor/jquery.inputmask.bundle.min.js?v={{version}}"></script>
+<script src="js/script.js?v={{version}}"></script>
+</body>
+</html>
