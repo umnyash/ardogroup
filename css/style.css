@@ -466,6 +466,7 @@ textarea {
 
 .btn--artnatura {
     background-color: #1D4F41;
+    color: #E1B696;
 }
 
 .btn--ardoproject {
@@ -479,6 +480,7 @@ textarea {
 .btn--solid:hover {
     background-color: transparent;
     border-color: #fff;
+    color: #fff;
 }
 
 .btn--ghost {
@@ -518,7 +520,7 @@ textarea {
     max-width: 100%;
     padding: 0 15px;
     position: relative;
-    width: 1200px;
+    width: 1204px;
 }
 
 .p-container--wide {
@@ -1027,7 +1029,7 @@ textarea {
 }
 
 .p-main .section:not(.section--intro)::before {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     bottom: 0;
     content: "";
     display: block;
